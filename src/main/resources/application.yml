@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://172.27.194.185:3306/portal?allowPublicKeyRetrieval=true&useSSL=false
+    username: portal_user
+    password: 1234
+
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
