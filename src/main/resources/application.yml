@@ -1,10 +1,6 @@
 spring:
   datasource:
-<<<<<<< HEAD
-    url: jdbc:mariadb://172.27.194.185:3306/portal?allowPublicKeyRetrieval=true&useSSL=false
-=======
     url: jdbc:mariadb://192.168.20.30:3306/portal?allowPublicKeyRetrieval=true&useSSL=false
->>>>>>> yslee
     username: portal_user
     password: 1234
 
