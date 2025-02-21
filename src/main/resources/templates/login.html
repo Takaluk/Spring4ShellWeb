@@ -2,22 +2,51 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>로그인</title>
+    <title>로그인 - 회사 포탈</title>
     <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <div class="container">
-        <h2>로그인</h2>
-        <form action="/login" method="post">
-            <label>이메일</label>
-            <input type="email" name="email" required>
-            
-            <label>비밀번호</label>
-            <input type="password" name="password" required>
-            
-            <button type="submit">로그인</button>
-        </form>
-        <p>계정이 없으신가요? <a href="/register">회원가입</a></p>
+
+    <div class="header">
+        <div class="logo">🚀 PORTAL</div>
+        <div class="user-info">
+            <a th:href="@{/register}">회원가입</a>
+        </div>
     </div>
+
+    <div class="wrapper">
+		<div class="sidebar">
+		    <a th:href="@{/dashboard}">🏠 홈</a>
+		    <a th:href="@{/updateProfile}">👤 프로필 관리</a>
+		    <a href="#">⚙️ 설정</a>
+		    <a href="#">📂 내 문서</a>
+		    <a href="#">📅 일정 관리</a>
+
+		    <div class="system-info">
+		        <h4>📊 시스템 정보</h4>
+		        <p>Spring: <span th:text="${springVersion}"></span></p>
+		        <p>Java: <span th:text="${javaVersion}"></span></p>
+		        <p>서버: <span th:text="${serverInfo}"></span></p>
+		    </div>
+		</div>
+
+        <div class="main-content">
+            <h2>로그인</h2>
+            <br>
+            <div class="form-container">
+                <form action="/login" method="post">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">로그인</button>
+                </form>
+                <p>계정이 없으신가요? <a href="/register">회원가입</a></p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
